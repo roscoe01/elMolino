@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -14,19 +14,18 @@ export default function Hero() {
   // El fondo se mueve la mitad que el scroll → parallax
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-
+  
+  
   return (
     <section
       ref={ref}
       className="relative h-screen w-full overflow-hidden bg-neutral-900"
     >
       {/* Fondo parallax (por ahora un gradient, después metemos foto) */}
-      <motion.div style={{ y }} className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-emerald-900 via-emerald-800 to-neutral-900" />
-      </motion.div>
+      <motion.div style={{y,backgroundImage: `url('/assets/fondoMolino.jpg')`,backgroundSize: "cover",backgroundPosition: "center",}}className="absolute inset-0"/>
 
       {/* Oscurecer un toque para que el logo resalte */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/0" />
 
       {/* Contenido */}
       <motion.div
@@ -36,19 +35,15 @@ export default function Hero() {
         <Image
           src="/assets/logo_blanco_home.png"
           alt="El Molino - Roldán"
-          width={500}
-          height={250}
+          width={1000}
+          height={500}
           priority
-          className="h-32 w-auto md:h-48"
+          className="w-250 h-auto md:w-[480px] lg:w-[720px]"
         />
-        <p className="mt-8 max-w-xl text-sm text-white/70 md:text-base">
+        <p className="mt-0 text-xs md:text-sm tracking-[0.3em] uppercase text-white font-light">
           Barrio residencial abierto · Roldán
         </p>
 
-        <div className="absolute bottom-10 flex flex-col items-center text-white/60">
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <div className="mt-2 h-8 w-px animate-pulse bg-white/60" />
-        </div>
       </motion.div>
     </section>
   );

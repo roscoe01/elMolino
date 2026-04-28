@@ -1,10 +1,11 @@
 import Hero from "@/components/Hero";
+import QueEsElMolino from "@/components/QueEsElMolino";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      {/* Acá van a ir las otras secciones */}
+      <QueEsElMolino />
       <section className="h-screen bg-white" />
     </main>
   );
