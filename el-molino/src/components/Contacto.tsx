@@ -130,7 +130,7 @@ export default function Contacto() {
           <button
             type="submit"
             disabled={estado === "enviando"}
-            className="mt-2 inline-flex items-center justify-center rounded-md bg-neutral-500 px-6 py-3.5 text-base md:text-lg font-light text-neutral-50 hover:bg-neutral-600 transition active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed"
+            className="mt-2 inline-flex cursor-pointer items-center justify-center border border-[#48563c] px-8 py-3.5 text-base font-medium text-[#48563c] hover:bg-[#48563c] hover:text-white transition-colors duration-200 active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {estado === "enviando" ? "Enviando..." : "Enviar"}
           </button>
