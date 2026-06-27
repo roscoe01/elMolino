@@ -31,7 +31,7 @@ const cards: Card[] = [
   {
     category: "Área social",
     title: "Pileta, Canchas\ny más.",
-    subtitle: "Semiolímpica, Tenis, Gimnasio,\nVestuarios y quincho.",
+    subtitle: "Semiolímpica, Tenis, Gimnasio,\nVestuarios y Quincho.",
     image: `${BASE}/assets/pileta.png`,
     icon: Waves,
   },
