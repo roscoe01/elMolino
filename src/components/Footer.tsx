@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { Phone } from "lucide-react";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const INSTAGRAM = "https://www.instagram.com/elmolinoroldan/";
 const YOUTUBE = "https://www.youtube.com/watch?v=a1gidzdkubE";
@@ -36,11 +37,9 @@ export default function Footer() {
 
           {/* Columna 1: Logo centrado */}
           <div className="flex justify-center">
-            <Image
-              src="/assets/homeLogo.png"
+            <img
+              src={`${BASE}/assets/homeLogo.png`}
               alt="El Molino"
-              width={260}
-              height={130}
               className="object-contain w-[200px] md:w-[260px]"
             />
           </div>

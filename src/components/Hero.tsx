@@ -1,8 +1,9 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import { useRef } from "react";
+
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,12 +33,9 @@ export default function Hero() {
         style={{ opacity }}
         className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
       >
-        <Image
-          src="/assets/logo_blanco_home.png"
+        <img
+          src={`${BASE}/assets/logo_blanco_home.png`}
           alt="El Molino - Roldán"
-          width={1000}
-          height={500}
-          priority
           className="w-250 h-auto md:w-[480px] lg:w-[720px]"
         />
         <p className="mt-0 text-xs md:text-sm tracking-[0.3em] uppercase text-white font-light">
