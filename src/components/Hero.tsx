@@ -22,7 +22,7 @@ export default function Hero() {
       className="relative h-screen w-full overflow-hidden bg-neutral-900"
     >
       {/* Fondo parallax (por ahora un gradient, después metemos foto) */}
-      <motion.div style={{y,backgroundImage: `url('/assets/fondoMolino.jpg')`,backgroundSize: "cover",backgroundPosition: "center",}}className="absolute inset-0"/>
+      <motion.div style={{y,backgroundImage: `url('${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/fondoMolino.jpg')`,backgroundSize: "cover",backgroundPosition: "center",}}className="absolute inset-0"/>
 
       {/* Oscurecer un toque para que el logo resalte */}
       <div className="absolute inset-0 bg-black/0" />

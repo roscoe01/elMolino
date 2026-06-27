@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { useState } from "react";
 
-const IMAGEN_FONDO = "/assets/mapaFondo.jpg";
-const PLANO_PDF = "/assets/Plano El Molino 5426.pdf";
-const PLANO_PDF_ENCODED = "/assets/Plano%20El%20Molino%205426.pdf";
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const IMAGEN_FONDO = `${BASE}/assets/mapaFondo.jpg`;
+const PLANO_PDF = `${BASE}/assets/Plano El Molino 5426.pdf`;
+const PLANO_PDF_ENCODED = `${BASE}/assets/Plano%20El%20Molino%205426.pdf`;
 
 export default function Mapa() {
   const [zoom, setZoom] = useState(1);
@@ -64,7 +65,7 @@ export default function Mapa() {
           className={`w-full max-w-[340px] md:max-w-[640px] overflow-hidden rounded-lg shadow-xl ring-1 ring-white/20 ${cursor}`}
         >
           <img
-            src="/assets/plano2026.jpg"
+            src={`${BASE}/assets/plano2026.jpg`}
             alt="Plano del barrio El Molino"
             draggable={false}
             style={{
