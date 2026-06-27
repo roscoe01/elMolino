@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { useState } from "react";
-
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { BASE_PATH as BASE } from "@/lib/config";
 const IMAGEN_FONDO = `${BASE}/assets/mapaFondo.jpg`;
 const PLANO_PDF = `${BASE}/assets/Plano El Molino 5426.pdf`;
 const PLANO_PDF_ENCODED = `${BASE}/assets/Plano%20El%20Molino%205426.pdf`;

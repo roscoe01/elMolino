@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FileCheck, Zap, Waves, MapPin } from "lucide-react";
+import { BASE_PATH as BASE } from "@/lib/config";
 
 type Card = {
   category: string;
@@ -15,30 +16,30 @@ type Card = {
 const cards: Card[] = [
   {
     category: "Escrituración",
-    title: "Escrituración\ninmediata.",
+    title: "Escrituración\nInmediata.",
     subtitle: "Comenzá a construir tu proyecto de inmediato.",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/estancia.png`,
+    image: `${BASE}/assets/estancia.png`,
     icon: FileCheck,
   },
   {
     category: "Servicios",
     title: "Todos los\nservicios.",
-    subtitle: "Electricidad, agua con planta\npotabilizadora y gas natural.",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/Galeria-2.jpg`,
+    subtitle: "Electricidad, Agua con planta\npotabilizadora y Gas natural.",
+    image: `${BASE}/assets/Galeria-2.jpg`,
     icon: Zap,
   },
   {
     category: "Área social",
-    title: "Pileta, canchas\ny más.",
-    subtitle: "Semiolímpica, tenis, gimnasio,\nvestuarios y quincho.",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/pileta.png`,
+    title: "Pileta, Canchas\ny más.",
+    subtitle: "Semiolímpica, Tenis, Gimnasio,\nVestuarios y quincho.",
+    image: `${BASE}/assets/pileta.png`,
     icon: Waves,
   },
   {
     category: "Ubicación",
     title: "A 20 min\nde Rosario.",
     subtitle: "Sin expensas.\nAlumbrado público en calles.",
-    image: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/assets/Galeria-4.jpg`,
+    image: `${BASE}/assets/Galeria-4.jpg`,
     icon: MapPin,
   },
 ];

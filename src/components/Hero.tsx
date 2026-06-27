@@ -2,8 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { BASE_PATH as BASE } from "@/lib/config";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);

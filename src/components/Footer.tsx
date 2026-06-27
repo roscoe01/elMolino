@@ -1,8 +1,7 @@
 "use client";
 
 import { Phone } from "lucide-react";
-
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { BASE_PATH as BASE } from "@/lib/config";
 
 const INSTAGRAM = "https://www.instagram.com/elmolinoroldan/";
 const YOUTUBE = "https://www.youtube.com/watch?v=a1gidzdkubE";
